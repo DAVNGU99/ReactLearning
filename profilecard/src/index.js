@@ -2,6 +2,39 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
+const listOfSkills = [
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "#2662EA",
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "#EFD81D",
+  },
+  {
+    skill: "Web Design",
+    level: "advanced",
+    color: "#C3DCAF",
+  },
+  {
+    skill: "Git and GitHub",
+    level: "intermediate",
+    color: "#E84F33",
+  },
+  {
+    skill: "React",
+    level: "advanced",
+    color: "#60DAFB",
+  },
+  {
+    skill: "Svelte",
+    level: "beginner",
+    color: "#FF3B00",
+  },
+];
+
 function App() {
   return (
     <div className="card">
@@ -34,21 +67,31 @@ function Intro() {
 }
 
 function SkillList() {
+  const skill = listOfSkills;
+  const numSkill = skill.length;
+
   return (
-    <div className="skill-list">
-      <Skill progL="HTML+CSS" emoji="😘" color="green" />
-      <Skill progL="React" emoji=" 	😚" color="red" />
-      <Skill progL="Svelte" emoji="🥸" color="orange" />
-      <Skill progL="Java" emoji="🥹" color="teal" />
-    </div>
+    <>
+      {numSkill > 0 && (
+        <div className="skill-list">
+          {skill.map((skill) => (
+            <Skill skillObj={skill} key={skill.skill} />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
-function Skill(props) {
+function Skill({ skillObj }) {
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.progL}</span>
-      <span>{props.emoji}</span>
+    <div className="skill" style={{ backgroundColor: skillObj.color }}>
+      <span>{skillObj.skill}</span>
+      <span>
+        {skillObj.level === "beginner" && "😇"}
+        {skillObj.level === "intermediate" && "😍"}
+        {skillObj.level === "advanced" && "🤨"}
+      </span>
     </div>
   );
 }
