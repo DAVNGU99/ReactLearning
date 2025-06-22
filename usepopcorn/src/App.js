@@ -1,4 +1,4 @@
-import { useEffect, useState, useTransition } from "react";
+import { use, useEffect, useState, useTransition } from "react";
 import StarRating from "./StarRating";
 const KEY = "a1398db";
 
@@ -6,7 +6,7 @@ const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
 export default function App() {
-  const [query, setQuery] = useState("kill");
+  const [query, setQuery] = useState("");
 
   const [selectedID, setSelectedID] = useState(null);
   const [movies, setMovies] = useState([]);
@@ -318,6 +318,23 @@ function MovieDetails({ selectedID, onCloseMovie, onAddWatched, watched }) {
     },
 
     [title]
+  );
+
+  useEffect(
+    function () {
+      function callback(e) {
+        if (e.code === "Escape") {
+          onCloseMovie();
+        }
+      }
+
+      document.addEventListener("keydown", callback);
+
+      return function () {
+        document.removeEventListener("keydown", callback);
+      };
+    },
+    [onCloseMovie]
   );
 
   useEffect(
