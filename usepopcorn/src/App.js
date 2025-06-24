@@ -1,4 +1,4 @@
-import { use, useEffect, useState, useTransition } from "react";
+import { use, useEffect, useRef, useState, useTransition } from "react";
 import StarRating from "./StarRating";
 const KEY = "a1398db";
 
@@ -10,9 +10,15 @@ export default function App() {
 
   const [selectedID, setSelectedID] = useState(null);
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState([]);
   const [isLoading, SetIsLoading] = useState(false);
   const [error, setError] = useState("");
+  // const [watched, setWatched] = useState([]);
+  const [watched, setWatched] = useState([
+    function () {
+      const storedValue = localStorage.getItem("watched");
+      return storedValue;
+    },
+  ]);
 
   function handleDeleteWatched(id) {
     setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
@@ -28,7 +34,16 @@ export default function App() {
 
   function handleAddWatch(movie) {
     setWatched((watched) => [...watched, movie]);
+
+    // localStorage.setItem("watched", JSON.stringify([...watched, movie]));
   }
+
+  useEffect(
+    function () {
+      localStorage.setItem("watched", JSON.stringify(watched));
+    },
+    [watched]
+  );
 
   useEffect(
     function () {
@@ -147,6 +162,17 @@ function Logo() {
 }
 
 function Search({ query, setQuery }) {
+  /*   useEffect(function () {
+    const el = document.querySelector(".search");
+    console.log(el);
+    el.focus();
+  }); */
+
+  const inputElement = useRef(null);
+  useEffect(function () {
+    inputElement.current.focus();
+  }, []);
+
   return (
     <input
       className="search"
@@ -154,6 +180,7 @@ function Search({ query, setQuery }) {
       placeholder="Search movies..."
       value={query}
       onChange={(e) => setQuery(e.target.value)}
+      ref={inputElement}
     />
   );
 }
