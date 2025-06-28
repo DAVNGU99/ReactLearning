@@ -1,4 +1,4 @@
-function Options() {
+function Options({ question }) {
   return (
     <div>
       <div className="options">
