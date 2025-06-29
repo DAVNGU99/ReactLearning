@@ -58,6 +58,14 @@ export default function App() {
           ...state,
           status: "finished",
         };
+      case "restart":
+        return {
+          ...state,
+          status: "active",
+          index: 0,
+          answer: null,
+          points: 0,
+        };
 
       default:
         throw new Error("Action unknown");
@@ -111,7 +119,11 @@ export default function App() {
           </>
         )}
         {status === "finished" && (
-          <FinishScreen points={points} maxPossiblePoints={maxPossiblePoints} />
+          <FinishScreen
+            points={points}
+            maxPossiblePoints={maxPossiblePoints}
+            dispatch={dispatch}
+          />
         )}
       </Main>
     </div>
