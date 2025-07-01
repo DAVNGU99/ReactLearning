@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./CityItem.module.css";
 
 const formatDate = (date) =>
@@ -18,5 +19,11 @@ function CityItem({ city }) {
     </li>
   );
 }
-
+CityItem.propTypes = {
+  city: PropTypes.shape({
+    cityName: PropTypes.string.isRequired,
+    emoji: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+  }).isRequired,
+};
 export default CityItem;
