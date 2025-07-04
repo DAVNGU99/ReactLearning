@@ -25,9 +25,4 @@ function CityList() {
   );
 }
 
-CityList.propTypes = {
-  cities: PropTypes.array.isRequired,
-  isLoading: PropTypes.bool.isRequired,
-};
-
 export default CityList;
