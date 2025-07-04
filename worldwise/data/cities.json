@@ -12,7 +12,6 @@
       },
       "id": 73930385
     },
-
     {
       "cityName": "Madrid",
       "country": "Spain",
@@ -36,6 +35,66 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "id": "0962",
+      "cityName": "Alcubierre",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-07-04T16:23:34.160Z",
+      "notes": "Padel",
+      "position": {
+        "lat": "41.73852846935917",
+        "lng": "-0.43945312500000006"
+      }
+    },
+    {
+      "id": "833d",
+      "cityName": "Aire-sur-l'Adour",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-07-04T16:35:01.495Z",
+      "notes": "Baguettes",
+      "position": {
+        "lat": "43.644025847699496",
+        "lng": "-0.26367187500000006"
+      }
+    },
+    {
+      "id": "da20",
+      "cityName": "Cartagena",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-07-04T16:40:51.038Z",
+      "notes": "",
+      "position": {
+        "lat": "37.666429212090605",
+        "lng": "-1.0107421875000002"
+      }
+    },
+    {
+      "id": "20b5",
+      "cityName": "In Salah",
+      "country": "Algeria",
+      "emoji": "🇩🇿",
+      "date": "2025-07-04T16:43:04.842Z",
+      "notes": "",
+      "position": {
+        "lat": "27.916766641249065",
+        "lng": "2.6367187500000004"
+      }
+    },
+    {
+      "id": "060a",
+      "cityName": "Menaka",
+      "country": "Mali",
+      "emoji": "🇲🇱",
+      "date": "2025-07-04T16:43:48.377Z",
+      "notes": "",
+      "position": {
+        "lat": "17.99963161491188",
+        "lng": "2.7685546875000004"
+      }
     }
   ]
 }
