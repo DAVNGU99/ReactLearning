@@ -71,6 +71,30 @@
         "lat": "31.353636941500987",
         "lng": "44.6484375"
       }
+    },
+    {
+      "id": "d6ab",
+      "cityName": "Ayora",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-07-04T20:51:33.972Z",
+      "notes": "",
+      "position": {
+        "lat": "39.06184913429154",
+        "lng": "-1.2524414062500002"
+      }
+    },
+    {
+      "id": "f7c4",
+      "cityName": "Philippines (the)",
+      "country": "Philippines (the)",
+      "emoji": "🇵🇭",
+      "date": "2025-07-04T20:51:46.895Z",
+      "notes": "",
+      "position": {
+        "lat": "15.284185114076445",
+        "lng": "121.99218750000001"
+      }
     }
   ]
 }
