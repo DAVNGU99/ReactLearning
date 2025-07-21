@@ -2,6 +2,7 @@
 
 import { useLoaderData } from "react-router-dom";
 import { getOrder } from "../../services/apiRestaurant";
+import OrderItem from "./OrderItem";
 import {
   calcMinutesLeft,
   formatCurrency,
@@ -49,6 +50,12 @@ function Order() {
           (Estimated delivery: {formatDate(estimatedDelivery)})
         </p>
       </div>
+
+      <ul className="divide-y divide-stone-200 border-b border-t">
+        {cart.map((item) => (
+          <OrderItem item={item} key={item.key} />
+        ))}
+      </ul>
 
       <div className="space-y-23 py-6- bg-stone-200 py-5">
         <p className="text-sm font-medium text-stone-600">
