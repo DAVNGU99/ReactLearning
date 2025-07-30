@@ -2,7 +2,6 @@ import { useEffect, useReducer } from "react";
 import DateCounter from "./DateCounter";
 import Loader from "./Loader";
 import Error from "./Error";
-
 import Header from "./Header";
 import Main from "./Main";
 import StartScreen from "./StartScreen";
