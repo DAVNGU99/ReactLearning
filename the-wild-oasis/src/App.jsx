@@ -14,9 +14,13 @@ function App() {
     <>
       <GlobalStyles />
       <StyledApp>
-        <Heading>The Wild Oasis</Heading>
+        <Heading as="h1">The Wild Oasis</Heading>
+        <Heading as="h2">Check in and out</Heading>
+
         <Button>Check in</Button>
         <Button>Check out</Button>
+        <Heading as="h3">Form</Heading>
+
         <Input type="number" placeholder="hello world" />
 
         <Input type="number" placeholder="hello world" />
