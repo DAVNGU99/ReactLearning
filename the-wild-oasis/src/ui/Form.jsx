@@ -5,8 +5,6 @@ const Form = styled.form`
     props.type === "regular" &&
     css`
       padding: 2.4rem 4rem;
-
-      /* Box */
       background-color: var(--color-grey-0);
       border: 1px solid var(--color-grey-100);
       border-radius: var(--border-radius-md);
@@ -15,7 +13,7 @@ const Form = styled.form`
   ${(props) =>
     props.type === "modal" &&
     css`
-      width: 80rem;
+      width: 100%;
     `}
     
   overflow: hidden;
