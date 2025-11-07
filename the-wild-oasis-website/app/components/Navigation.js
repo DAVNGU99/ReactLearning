@@ -4,6 +4,9 @@ function navigation() {
   return (
     <ul>
       <li>
+        <Link href="/">Home</Link>{" "}
+      </li>
+      <li>
         <Link href="/cabins">Cabins page</Link>{" "}
       </li>
       <li>
