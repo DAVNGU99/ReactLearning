@@ -1,7 +1,7 @@
 function page() {
   return (
     <div>
-      <h1 className="font-mono text-2xl">The wild oasis</h1>
+      <h1 className="font-mono text-2xl">The Wild Oasis</h1>
     </div>
   );
 }
